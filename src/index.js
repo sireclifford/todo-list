@@ -1,22 +1,67 @@
-import _ from 'lodash';
 import './style.css';
-import printMe from './print.js';
+import './assets/images/options.png';
+import './assets/images/refresh.png';
+import './assets/images/return.png';
 
-const component = () => {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
+const todoListItems = [
+  {
+    index: 0,
+    description: 'Learn Webpack',
+    completed: false,
+  },
+  {
+    index: 1,
+    description: 'Learn React',
+    completed: true,
+  },
+  {
+    index: 2,
+    description: 'Learn TypeScript',
+    completed: false,
+  },
+  {
+    index: 3,
+    description: 'Learn Angular',
+    completed: false,
+  },
+  {
+    index: 4,
+    description: 'Learn Vue',
+    completed: false,
+  },
+  {
+    index: 5,
+    description: 'Learn Node',
+    completed: false,
+  },
+  {
+    index: 6,
+    description: 'Learn MongoDB',
+    completed: false,
+  },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const loadTodoList = () => {
+  const itemContainer = document.querySelector('.items');
+  todoListItems.forEach((item) => {
+    const itemElement = document.createElement('li');
+    itemElement.innerHTML = `
+      <input type="checkbox" ${item.completed ? 'checked' : ''}>`;
+    const itemText = document.createElement('p');
+    itemText.classList.add('item-name');
+    itemText.innerHTML = item.description;
 
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
+    const reOrderBtn = document.createElement('img');
+    reOrderBtn.classList.add('item-reorder');
+    reOrderBtn.src = 'assets/images/options.png';
+    reOrderBtn.setAttribute('alt', 'reorder');
 
-  element.appendChild(btn);
-
-  element.classList.add('hello');
-
-  return element;
+    itemElement.appendChild(itemText);
+    itemElement.appendChild(reOrderBtn);
+    itemContainer.appendChild(itemElement);
+  });
 };
 
-document.body.appendChild(component());
+window.onload = () => {
+  loadTodoList();
+};
