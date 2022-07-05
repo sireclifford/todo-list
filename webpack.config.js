@@ -2,10 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: { index: './src/index.js', print: './src/print.js' },
+  entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Getting Started With WebPack',
+      title: 'TODO List',
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -18,6 +19,18 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/',
+            },
+          },
+        ],
       },
     ],
   },

@@ -1,3 +1,111 @@
-.hello {
-  color: red;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #f1f2f5;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap.content {
+  padding: 60px 0 80px;
+}
+
+.list {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  width: 60%;
+  background: white;
+}
+
+.list-header {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.list-header .name {
+  width: 90%;
+  flex: 1;
+}
+
+img.refresh-list,
+img.item-reorder {
+  align-self: center;
+  width: 24px;
+}
+
+ul.items {
+  padding-left: 10px;
+  list-style: none;
+  margin: 0;
+  padding-right: 10px;
+}
+
+.items li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+p.item-name {
+  width: 80%;
+  flex: 1;
+  margin-left: 20px;
+}
+
+form.add-new {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 10px;
+}
+
+input[type="text"] {
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+}
+
+img.submit-new-item {
+  align-self: center;
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f2f5;
+  height: 50px;
+  margin: 0;
 }
