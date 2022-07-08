@@ -69,7 +69,6 @@ clearBtn.addEventListener('click', () => {
   loadTodoList();
 });
 
-// add new with enter
 const newItem = document.querySelector('#new-item');
 newItem.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
