@@ -2,7 +2,6 @@
   "homepage": "https://sireclifford.github.io/todo-list/",
   "name": "todo-list",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
@@ -20,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/sireclifford/todo-list/issues"
   },
-  "homepage": "https://github.com/sireclifford/todo-list#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
