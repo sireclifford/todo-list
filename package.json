@@ -1,9 +1,12 @@
 {
+  "homepage": "https://github.com/sireclifford/todo-list",
   "name": "todo-list",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "webpack",
     "start": "webpack serve --open"
   },
@@ -17,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/sireclifford/todo-list/issues"
   },
-  "homepage": "https://github.com/sireclifford/todo-list#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
@@ -25,6 +27,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "hint": "^7.0.1",
     "html-loader": "^3.1.2",
     "html-webpack-plugin": "^5.5.0",
