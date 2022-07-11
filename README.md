@@ -48,7 +48,7 @@ git clone https://github.com/sireclifford/todo-list.git
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/sireclifford)
+- GitHub: [@sireclifford](https://github.com/sireclifford)
 
 ## 🤝 Contributing
 
