@@ -67,3 +67,14 @@ import {
     });
   });
   
+  describe('test_DOM', () => {
+    it('test_DOM', () => {
+      const list = document.createElement('ul');
+      list.id = 'todo-list';
+      const listItem = document.createElement('li');
+      listItem.id = 'todo-item';
+      listItem.innerHTML = 'test';
+      list.appendChild(listItem);
+      expect(list.innerHTML).toBe('<li id="todo-item">test</li>');
+    });
+  });
