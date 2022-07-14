@@ -1,6 +1,10 @@
 {
   "homepage": "https://github.com/sireclifford/todo-list",
   "name": "todo-list",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
+  },
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
@@ -8,7 +12,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +26,7 @@
     "url": "https://github.com/sireclifford/todo-list/issues"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
@@ -31,6 +37,8 @@
     "hint": "^7.0.1",
     "html-loader": "^3.1.2",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.2",
+    "jest-localstorage-mock": "^2.4.21",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -41,6 +49,8 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "jest-environment-jsdom": "^28.1.3",
     "lodash": "^4.17.21"
-  }
+  },
+  "type":"module"
 }
