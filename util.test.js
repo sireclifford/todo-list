@@ -32,3 +32,38 @@ import {
     });
   });
   
+  describe('edit_description_test', () => {
+    it('edit_description_Todo', () => {
+      expect(updateTodo(0, 'clifford', true).title).toBe('clifford');
+    });
+  });
+
+  describe('edit_status_test', () => {
+    it('edit_completed_status_Todo', () => {
+      expect(updateTodo(0, 'test', true).completed).toBe(true);
+    });
+  });
+
+  describe('Remove completed', () => {
+    it('clear_completed_Todo', () => {
+      const listArray = [
+        {
+          id: 0,
+          title: 'test',
+          completed: true,
+        },
+        {
+          id: 1,
+          title: 'test2',
+          completed: true,
+        },
+        {
+          id: 2,
+          title: 'test3',
+          completed: true,
+        },
+      ];
+      expect(removeTodo(listArray)).toEqual([]);
+    });
+  });
+  
